@@ -1,0 +1,18 @@
+이 폴더에 아래 이름으로 사진(JPG)을 넣으면 사이트에 자동으로 나타납니다.
+사진이 없는 자리는 녹색 바탕으로 보입니다.
+
+[첫 화면]
+hero.jpg              맨 위 큰 대표 사진 (가로로 긴 사진)
+home-philosophy.jpg   중간의 세로 사진
+film-main.jpg         대표 영상 표지 (가로 사진)
+door-about.jpg        아래쪽 안내 사진 1 (세로)
+door-film.jpg         아래쪽 안내 사진 2 (세로)
+door-product.jpg      아래쪽 안내 사진 3 (세로)
+
+[ABOUT]
+about-main.jpg        맨 위 큰 사진 (가로)
+about-philosophy.jpg  촬영 철학 옆 사진 (세로)
+about-director.jpg    대표 감독 사진 (세로)
+
+[WEDDING FILM]
+film-01.jpg ~ film-06.jpg   각 영상의 표지 사진 (가로)

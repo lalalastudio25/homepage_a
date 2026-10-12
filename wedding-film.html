@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wedding Film | STUDIO NAME</title>
+  <meta name="description" content="STUDIO NAME 이 촬영한 웨딩 필름 모음입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">STUDIO NAME</a>
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="about.html">About</a>
+        <a class="is-current" href="wedding-film.html">Wedding Film</a>
+        <a href="product.html">Product</a>
+        <a href="reservation.html">Reservation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="title">Wedding Film</h1>
+        <p class="lead">저희가 함께한 하루들입니다. 영상을 누르면 바로 감상하실 수 있습니다.</p>
+      </div>
+    </section>
+
+    <!-- 영상 목록
+         영상 하나 = <div class="film"> 한 묶음입니다.
+         data-youtube 에 유튜브 영상 번호를 넣으면 눌렀을 때 재생되고,
+         images 폴더에 같은 이름의 사진을 넣으면 표지 사진으로 보입니다. -->
+    <section class="section" style="padding-top: 0">
+      <div class="container films">
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-01.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Minji &amp; Junho</h2>
+            <span class="film__meta">2026. 05 · 서울</span>
+          </div>
+        </div>
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-02.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Seoyeon &amp; Dohyun</h2>
+            <span class="film__meta">2026. 04 · 제주</span>
+          </div>
+        </div>
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-03.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Yuna &amp; Taeho</h2>
+            <span class="film__meta">2026. 03 · 부산</span>
+          </div>
+        </div>
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-04.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Haeun &amp; Siwoo</h2>
+            <span class="film__meta">2025. 11 · 서울</span>
+          </div>
+        </div>
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-05.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Jiwoo &amp; Minseok</h2>
+            <span class="film__meta">2025. 10 · 경기</span>
+          </div>
+        </div>
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-06.jpg')">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">Sua &amp; Hyunwoo</h2>
+            <span class="film__meta">2025. 09 · 강원</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 예약 유도 -->
+    <section class="section section--green cta">
+      <div class="container reveal">
+        <p class="eyebrow">Reservation</p>
+        <h2 class="title title--kr">다음 영상의 주인공이 되어 주세요.</h2>
+        <a class="btn btn--light" href="reservation.html">Reservation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a class="logo" href="index.html">STUDIO NAME</a>
+          <p class="footer__tag">Wedding films for timeless days.</p>
+        </div>
+        <div>
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="wedding-film.html">Wedding Film</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>010-0000-0000</li>
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Studio</h3>
+          <ul>
+            <li>서울시 OO구 OO로 00</li>
+            <li>평일 10:00 – 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom">&copy; 2026 STUDIO NAME. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
