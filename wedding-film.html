@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wedding Film | STUDIO NAME</title>
-  <meta name="description" content="STUDIO NAME 이 촬영한 웨딩 필름 모음입니다.">
+  <title>Wedding Film | Lalala Studio</title>
+  <meta name="description" content="Lalala Studio가 촬영한 웨딩 필름 모음입니다.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20261014k">
+  <script>(function(c){c.add("js");try{if(!sessionStorage.getItem("seen")){c.add("first-visit");sessionStorage.setItem("seen","1")}}catch(e){}})(document.documentElement.classList)</script>
 </head>
 <body>
+  <!-- 화면 전환 막 -->
+  <div class="curtain" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container header__inner">
-      <a class="logo" href="index.html">STUDIO NAME</a>
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="Lalala Studio"></a>
       <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -34,76 +37,127 @@
         <p class="eyebrow">Portfolio</p>
         <h1 class="title">Wedding Film</h1>
         <p class="lead">저희가 함께한 하루들입니다. 영상을 누르면 바로 감상하실 수 있습니다.</p>
+        <!-- 영상 종류 바로가기: 누르면 해당 구역으로 내려갑니다 -->
+        <nav class="product-nav" aria-label="영상 종류 바로가기">
+          <a href="#ceremony"><span class="product-nav__no">01</span><span class="product-nav__kr">본식영상</span><span class="product-nav__en">Wedding Ceremony Film</span></a>
+          <a href="#prewedding"><span class="product-nav__no">02</span><span class="product-nav__kr">프리웨딩영상</span><span class="product-nav__en">Pre-Wedding Film</span></a>
+        </nav>
       </div>
     </section>
 
-    <!-- 영상 목록
-         영상 하나 = <div class="film"> 한 묶음입니다.
+    <!-- 영상 목록: 본식영상 / 프리웨딩영상 두 구역으로 나뉩니다.
+         영상 하나 = <div class="film"> 한 묶음입니다. 새 영상은 맞는 구역 안에 붙여 넣습니다.
          data-youtube 에 유튜브 영상 번호를 넣으면 눌렀을 때 재생되고,
          images 폴더에 같은 이름의 사진을 넣으면 표지 사진으로 보입니다. -->
-    <section class="section" style="padding-top: 0">
-      <div class="container films">
 
-        <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-01.jpg')">
+    <!-- 01 본식영상 -->
+    <section class="section product-section" id="ceremony">
+      <div class="container">
+        <p class="product__label reveal"><span>01</span>본식영상</p>
+        <!-- 예식장 고르기: 누르면 그 예식장에서 찍은 영상만 보입니다.
+             영상의 data-venue 와 버튼의 data-venue 글자가 같아야 합니다 -->
+        <div class="film-filter reveal" role="group" aria-label="예식장으로 고르기">
+          <button class="pill" type="button" data-venue="" aria-pressed="true">전체</button>
+          <button class="pill" type="button" data-venue="기독교연합회관" aria-pressed="false">기독교연합회관</button>
+          <button class="pill" type="button" data-venue="아펠가모 공덕" aria-pressed="false">아펠가모 공덕</button>
+          <button class="pill" type="button" data-venue="라마다 신도림" aria-pressed="false">라마다 신도림</button>
+          <button class="pill" type="button" data-venue="더테라스웨딩" aria-pressed="false">더테라스웨딩</button>
+          <button class="pill" type="button" data-venue="웨딩시그니처" aria-pressed="false">웨딩시그니처</button>
+        </div>
+        <div class="films">
+
+        <div class="film reveal" data-venue="기독교연합회관">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="tn4Hgegr4Kg" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-01.jpg'), var(--photo-fallback)">
             <span class="film__play"></span>
           </button>
           <div class="film__info">
-            <h2 class="film__title">Minji &amp; Junho</h2>
-            <span class="film__meta">2026. 05 · 서울</span>
+            <h2 class="film__title">기독교연합회관 웨딩홀</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        <div class="film reveal" data-venue="아펠가모 공덕">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="oME4VEG-e6U" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-04.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">공덕 아펠가모</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        <div class="film reveal" data-venue="라마다 신도림">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="8aLHyVrpjMU" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-05.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">라마다 서울 신도림 호텔</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        <div class="film reveal" data-venue="더테라스웨딩">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="EIzmxVNMS1w" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-06.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">더테라스웨딩</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        <div class="film reveal" data-venue="아펠가모 공덕">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="W_h0mhIYCIQ" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-07.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">아펠가모 공덕</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        <div class="film reveal" data-venue="웨딩시그니처">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="9WWsRr0sHDs" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-08.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">웨딩시그니처</h2>
+            <span class="film__meta">본식 하이라이트</span>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 프리웨딩영상 -->
+    <section class="section section--soft product-section" id="prewedding">
+      <div class="container">
+        <p class="product__label reveal"><span>02</span>프리웨딩영상</p>
+        <div class="films">
+
+        <div class="film reveal">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="mZ41ALCaids" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-02.jpg'), var(--photo-fallback)">
+            <span class="film__play"></span>
+          </button>
+          <div class="film__info">
+            <h2 class="film__title">용산가족공원 · 동작대교 · 야외 프리웨딩 식전영상</h2>
           </div>
         </div>
 
         <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-02.jpg')">
+          <button class="film__screen photo photo--wide" type="button" data-youtube="6mk1zmiyJbY" data-embed="off" aria-label="영상 재생" style="background-image: url('images/film-03.jpg'), var(--photo-fallback)">
             <span class="film__play"></span>
           </button>
           <div class="film__info">
-            <h2 class="film__title">Seoyeon &amp; Dohyun</h2>
-            <span class="film__meta">2026. 04 · 제주</span>
+            <h2 class="film__title">다큐 인터뷰형 식전영상</h2>
           </div>
         </div>
 
-        <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-03.jpg')">
-            <span class="film__play"></span>
-          </button>
-          <div class="film__info">
-            <h2 class="film__title">Yuna &amp; Taeho</h2>
-            <span class="film__meta">2026. 03 · 부산</span>
-          </div>
         </div>
-
-        <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-04.jpg')">
-            <span class="film__play"></span>
-          </button>
-          <div class="film__info">
-            <h2 class="film__title">Haeun &amp; Siwoo</h2>
-            <span class="film__meta">2025. 11 · 서울</span>
-          </div>
-        </div>
-
-        <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-05.jpg')">
-            <span class="film__play"></span>
-          </button>
-          <div class="film__info">
-            <h2 class="film__title">Jiwoo &amp; Minseok</h2>
-            <span class="film__meta">2025. 10 · 경기</span>
-          </div>
-        </div>
-
-        <div class="film reveal">
-          <button class="film__screen photo photo--wide" type="button" data-youtube="" aria-label="영상 재생" style="--img: url('images/film-06.jpg')">
-            <span class="film__play"></span>
-          </button>
-          <div class="film__info">
-            <h2 class="film__title">Sua &amp; Hyunwoo</h2>
-            <span class="film__meta">2025. 09 · 강원</span>
-          </div>
-        </div>
-
+      </div>
+      <div class="container" style="margin-top: clamp(36px, 5vw, 64px)">
+        <a class="link-arrow" href="https://www.youtube.com/@lalalastudio_wedding" target="_blank" rel="noopener">More on YouTube</a>
       </div>
     </section>
 
@@ -122,8 +176,8 @@
     <div class="container">
       <div class="footer__top">
         <div>
-          <a class="logo" href="index.html">STUDIO NAME</a>
-          <p class="footer__tag">Wedding films for timeless days.</p>
+          <a class="logo" href="index.html"><img src="images/logo.png" alt="Lalala Studio"></a>
+          <p class="footer__tag">눈부신 화려함보다, 존귀한 순간을 담습니다.</p>
         </div>
         <div>
           <h3>Menu</h3>
@@ -137,23 +191,24 @@
         <div>
           <h3>Contact</h3>
           <ul>
-            <li>010-0000-0000</li>
-            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="https://pf.kakao.com/_CxfGTX" target="_blank" rel="noopener">카카오톡 채널</a></li>
+            <li>2026–27년 본식 예약 진행 중</li>
           </ul>
         </div>
         <div>
-          <h3>Studio</h3>
+          <h3>Follow</h3>
           <ul>
-            <li>서울시 OO구 OO로 00</li>
-            <li>평일 10:00 – 18:00</li>
+            <li><a href="https://www.instagram.com/lalalastudio_wedding" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@lalalastudio_wedding" target="_blank" rel="noopener">YouTube</a></li>
           </ul>
         </div>
       </div>
-      <p class="footer__bottom">&copy; 2026 STUDIO NAME. All rights reserved.</p>
+      <p class="footer__bottom">&copy; 2026 Lalala Studio. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- 부드러운 스크롤 -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261014k"></script>
 </body>
 </html>
